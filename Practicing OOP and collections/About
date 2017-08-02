@@ -1,0 +1,114 @@
+This is a part of assignment of "Advanced Java Web Programming" (CS 532) of Northwestern Polytechnic University.
+This project is a Based on following instruction by professor :
+
+The purpose of this lab is to practice writing Java classes, use the ArrayList class, 
+Override methods of the Object class, create multi file programs, and use packages.
+
+  Task I:  Write a class Name
+
+  1. The data members should include the title (e.g, Mr., Ms., Dr., Mrs.) first name, last name,
+  and middle initial (a single character) 
+  2. Use symbolic constants for the title data member – don’t store the information as a String (What benefits do you get 
+  by using symbolic constants rather than Strings?) 
+  3. Write a constructor that takes the first name and last name as parameters. 
+  4. Write set functions for the middle initial and title.   If the middle initial is never set, the middle initial should 
+  just be a blank character.   If the title is never set, it should have a value specifying it is unknown.   
+  There should not be a set function for the first or last name – we will not allow those data members to be changed after
+  the object is created. 
+  5. Write get functions for the four data members 
+  6. Override the toString() function for the Name class and return a String such as:  Mr. John
+  Q. Watson or Sue Jones.   Note the first example name has a middle initial and a title; the
+  second example name has only a first and last name. 
+  7. Override the equals() method.   Two names are equal only if the title, first name, middle initial, and last name are the same.
+  
+  Task II:  Write a class Student
+
+  8. The data members should include the student name (use a reference to a Name object), student id, number of credits that the
+  student has taken, and whether the student is a graduate student or not 
+  9. Write an appropriate set of constructors, get functions, and set functions. There should NOT be any set functions for the 
+  student id or the student name – once these fields are set in the constructor, they should not be modified. 
+  10. Write a member function isGraduateStudent() that returns true if the student is a graduate student, false otherwise. 
+  11. Override the toString() function for the Student class
+  12. Override the equals() method   Two students can be considered equal if they have the same name and the same id.
+  
+  Task III:  Write a class Course
+ 
+  1. The data members should include the department name (e.g., English, Computer Science,
+  Business), the course number (e.g., 171, 345, 602), the name of the instructor (use a reference to a Name object), 
+  a list of students in the course,  the maximum class size, and whether or not the course is open to undergraduate students. 
+  For the list of students, use an ArrayList.
+  
+  2. Include the following member functions: 
+    • A constructor that initializes the department name, course number, maximum class size,
+    and whether or not the course is open to undergraduate students
+    • A set function that allows you to set the instructors name
+    • An bool addStudent() function that takes a student as a parameter  and adds the students in the to the course.  
+    The function should return true if the Student is successfully added to the Course, false otherwise.   
+    Note: be careful to ensure data integrity for your course object. Do not add the student to the list if
+      •	a student with the same student id is already in the course list (we don’t want duplicate students in the course list!).
+      •	doing so will exceed the maximum class size.
+      •	The student passed as a parameter is an undergraduate student and the course is only open to graduate students
+    • A function that allows you to remove a student from the course when given the student id
+    • A function that given a Name object, returns a Student object if the student is in the course, 
+    null if the student is not enrolled in the course
+    • A function hasStudent() that takes a Student as a parameter and returns true if the Student is enrolled in the course, 
+    false if the student is not. Note that you should not use == to compare students as that would be address comparison.
+    We want to do a data comparison which will return true if the Students are different objects, but have the same data.
+    How can you do a data comparison instead of an address comparison? 
+    • A function that returns the number of students enrolled in the course 
+    • A function to get the course number
+    • A function to get the instructor name
+    • A function that returns the list of students as a simple Java array. The purpose of this function is to give the user a 
+    list of the students by making a new copy – note only the Student references are copied, not the Student objects. 
+    This function returns a simple Java array – in other words:    Student [] 
+    It does NOT return an ArrayList. The array should be perfectly sized (have exactly the same number of elements as the 
+    array list – you’ll need to allocate the array and copy the Student references into it.
+
+  Task IV:  Write a test program (class)
+
+  1.	This class should be in a different package than the Name, Student and Course classes
+  2. This class will include your main() function and will be used to test the Student and Course 
+    classes.   You do not need to write an interactive user interface to test your classes – that is a
+    poor way of doing testing because it is time consuming and tedious.   You’ll hardcode some
+    data (object instantiations), call the various functions and print some results.   That way, you
+    can easily test your code without having to type lots of data every time you run the program.
+    
+    Write a function that is not main() (but is called by main!)  that does the following testing:
+  3. • instantiates a course object      
+     • instantiates and adds 3 students to the course  
+     • remove a student from the class  
+    • tests the ability to find a student (try to find a student that is actually in the class, and then 
+    try to find a student that is not in the class) – use both of your find methods (find by name
+    and find by a student object)     
+    • call the function that returns a list of all students in the class and prints the results
+    • call the function that returns the number of students in the course and prints the results 
+
+4. Write a function that takes an array of Courses and returns the Courses in the array that will be cancelled due to 
+low enrollment.  The function should have a second parameter that specifies the minimum acceptable course enrollment 
+– if that enrollment is not met, the course will be canceled.   The function should return the canceled courses in an ArrayList.
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+    
+    
+
+
+
+
+
+
+  
+
+
+
