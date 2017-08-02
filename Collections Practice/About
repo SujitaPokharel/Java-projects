@@ -1,0 +1,28 @@
+This is a part of assignment of "Advanced Java Web Programming" (CS 532) of Northwestern Polytechnic University.
+This project is a Based on following instruction by professor :
+
+
+  The purpose of this lab is get experience using collection classes. 
+
+  First Exercise: 
+  
+  Fast Customer Lookup Modify the program (GUI written for you) so that a Name search can be done or a Phone search. 
+  We'll assume phone numbers are unique -- given a Phone number, there is exactly one customer. 
+  However, Name searches are not unique. Given a Name, there will be a list of customers. 
+  Try this first using ArrayList so you can use a data structure you are familiar with and can understand the problem better. 
+  Then switch to a better data structure -- make sure you are not doing a linear search!   
+    Note that you will need a different data structure for each search -- that is the price of improving the speed. 
+    But the cost should still be minimal because you will not be duplicating Customer objects. 
+    There should still be only one copy of each Customer. 
+
+
+  Second Exercise: 
+  
+  Remove duplicates in a customer list This is a common problem for companies. 
+  They have a list of existing customers and a list of Customers who have made recent purchases. 
+  The challenge is to merge the two lists so that no Customer is listed twice. 
+  A duplicate is a Customer with the same Name and same Phone number.
+  Once again, you should start with an ArrayList to understand the problem. 
+  Then see if you can greatly speed up the algorithm by using a different data structure. 
+  Make sure you are not doing a linear search to see if a Customer is already in the list! 
+
