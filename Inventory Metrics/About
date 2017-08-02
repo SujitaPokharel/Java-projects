@@ -1,0 +1,23 @@
+This is a part of assignment of "Advanced Java Web Programming" (CS 532) of Northwestern Polytechnic University.
+This project is a Based on following instruction by professor :
+
+  A simple Inventory GUI program was discussed in class.   You will add new functionality to it – the Inventory Metrics window.  
+  The program will have two windows (JFrames).   The original window and the new Inventory Metrics window.  
+  Operation of the Inventory Metrics window 
+ 
+  This window displays two metrics for the Toaster product: 
+
+  1. Average Transaction Size.   One transaction is a shipment or a delivery.   
+  The size of each shipment or delivery should be added to a running average.   
+  When the program starts up the average will have a value of 0.   
+  As new shipments and deliveries are made, this will change. 
+
+  2. Distance From Baseline.   Each product has a baseline data member.   
+  This is the inventory level that is considered ideal.   
+  If there is excess inventory or much lower inventory than this level, there is cause for concern.   
+  We’ll set  a difference of 25% (25 % greater than or 25% less than) as the start of the red line area,
+  at which point the baseline color should change from green to red.   The distance is the actual distance (in number of units).   The color (green or red ) indicates if the distance is within 25% or is greater than 25%.   For example, if the baseline for the product is 15 and the number of items in the inventory is 20, then the distance from the base line is 5, which is 33% from the base line (5/15 = 33 %).   The base line color should be red since 33% is greater than 25%.
+
+    
+    
+    NOTE:  PLEASE REFER TO PDF FILE  "lab1"  ATTACHED TO KNOW DETAIL ABOUT THIS PROJECT
