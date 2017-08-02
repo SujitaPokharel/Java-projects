@@ -1,0 +1,47 @@
+
+
+  With this lab you will get practice using threads, networking, and databases.
+  
+  Requirements: 
+  
+  Redo the previous Customer Lookup program as a Client/Server implementation.   Essentially you are breaking up the 
+  previous lab into two different programs – a server program and a client program.
+  
+  Hand in the following 
+    1) a Server which has the data on all the customers and can perform the necessary searches.   
+      The server will retrieve the data from the database rather than storing the data in a data structure as was done in Lab #2.  
+      Your Server should support multiple Clients at the same time.   Try using a Thread Pool to handle thread support. 
+
+    2) a Client (the GUI) which requires services (customer lookups).   
+      Use the GUI provided with Lab #2 to enter either a phone number or a customer name.   
+      Each lookup should create a new Socket connection to the server, send the necessary data, get back the result, 
+      print the result, and close the Socket connection. 
+      
+    3)  Include the SQL statements required to create the database schema, create the database table, and create the user.   
+      Don’t generate this yourself, just copy it from the SQL commands you see in MySQL Workbench.   
+      If you are not sure how to get these statements, please ask. 
+
+  My Advice on how to do the lab: 
+
+  My suggestion is to do this in small steps.  
+  Ideally you should learn to do this on your own – break up a small steps complicated task into smaller, simpler tasks. 
+  
+    1. Start with the server retrieving the data from the data structure (not the database) you used in Lab #2.  
+    Don’t support multiple clients (support only one client at a time).   
+    This allows you to figure out how to break the program into two separate programs (a server and a client) and get the networking code working – test it. 
+      a. Start with the client sending a phone number and getting back a Customer object 
+      b. Once that is working, instead of the client sending a phone number, have the client send a Name object and get back a list of Customers. 
+      c. Finally modify the code so the client will send what type of query it wants (name search or phone search) and then either a phone number or a name (depending on what type of query is being requested) 
+      d. Use Serialization to send non-primitive data (Objects) across the network.  
+        Remember, even an entire List can be sent to the I/O stream with only one write operation using Serialization.   
+        If you haven’t used this before, read the textbook (or go to the NPU library and look the topic up in the index 
+        of a few Java books) and then ask questions if you need additional help. 
+
+    2. Create a threaded server so you can support multiple clients.
+    3. Add the database part.   
+      Create a database schema, the necessary table, add some data to the table, create a user and password that has permissions for the schema.   
+      Write code to do a SQL query to retrieve the information the client is requesting.   
+      Then you can replace the data structure lookup with the database lookup.   
+      Each client thread should have its own database connection.    
+
+    
