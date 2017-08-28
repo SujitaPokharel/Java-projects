@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Loader delegate="true"/>
+<Resource
+        name="jdbc/bookrentaldb"
+        auth="Container"
+        type="javax.sql.DataSource"
+        maxActive="10"
+        maxIdle="4"
+        username="bookDbUser"
+        maxWait="1"
+        driverClassName="com.mysql.jdbc.Driver"
+        password="studentpswd"
+        url="jdbc:mysql://localhost/project_bookrentalsystem"/>
+</Context>

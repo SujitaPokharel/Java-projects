@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+
+	<!-- This is the first Url and we want to direct homepage to WelcomeServlet -->
+	<welcome-file-list>
+		<welcome-file>OnlineBookRentalSystem</welcome-file>
+	</welcome-file-list>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<servlet-class>project.servlets.WelcomeServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ListOfBooksServlet</servlet-name>
+		<servlet-class>project.servlets.ListOfBooksServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>YourCartServlet</servlet-name>
+		<servlet-class>project.servlets.YourCartServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ProceedToCheckoutServlet</servlet-name>
+		<servlet-class>project.servlets.ProceedToCheckoutServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>TransactionCompleteServlet</servlet-name>
+		<servlet-class>project.servlets.TransactionCompleteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<url-pattern>/OnlineBookRentalSystem</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ListOfBooksServlet</servlet-name>
+		<url-pattern>/BookList.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>YourCartServlet</servlet-name>
+		<url-pattern>/addCourseToCart.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProceedToCheckoutServlet</servlet-name>
+		<url-pattern>/Checkout.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>TransactionCompleteServlet</servlet-name>
+		<url-pattern>/TransactionCompleted.html</url-pattern>
+	</servlet-mapping>
+	
+	<resource-ref>
+      <description>DB Connection</description>
+      <res-ref-name>jdbc/bookrentaldb</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+  </resource-ref>
+
+</web-app> 
